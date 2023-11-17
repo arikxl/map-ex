@@ -4,20 +4,24 @@ import 'leaflet/dist/leaflet.css';
 import { Icon } from "leaflet"
 import { useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+import Search from './Search';
 import eventsData from '../data/events';
+import FlyToMarker from './FlyToMarker';
 
 export interface Events {
     id: number;
     title: string;
+    category: string;
     description: string;
     position: [number, number];
-    category: string;
 }
 
-const getIcon = (category: string) => {
+const getIcon = (category: string | undefined) => {
     switch (category) {
         case 'Art':
             return <i className="fa-solid fa-palette" > </i>
+        case 'Home':
+            return <i className="fa-solid fa-heart"></i>
         case 'Military Conflict':
             return <i className="fa-solid fa-person-rifle" > </i>
         case 'Politics':
@@ -39,10 +43,10 @@ const getIcon = (category: string) => {
     }
 }
 
-
 const MapApp = () => {
 
     const [activeEvent, setActiveEvent] = useState<Events | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [favs, setFavs] = useState<number[]>(() => {
         const savedFavs = localStorage.getItem('nextMap-favs');
         return savedFavs ? JSON.parse(savedFavs) : [];
@@ -65,25 +69,20 @@ const MapApp = () => {
         iconAnchor: [12, 41]
     });
     const emptyStar = <i className="fa-regular fa-star"></i>;
-    const fullStar = (
-        <i
-            className="fa-solid fa-star"
-            style={{
-                color: "#fdc401",
-            }}
-        ></i>
-    );
+    const fullStar = (<i className="fa-solid fa-star" style={{ color: "#fdc401" }}></i>);
 
+    const handleListItemClick = (eventId: number) => {
+        const event: any = eventsData.find((event) => event.id === eventId);
+        if (event) setActiveEvent(event);
+    };
 
     return (
         <div className='content flex gap-4'>
             <div className="flex flex-col w-4/5 h-full">
                 <div className="h-12 ">
-
+                    <Search setSelectedCategory={setSelectedCategory} setActiveEvent={setActiveEvent} />
                 </div>
-                <MapContainer zoom={12}
-                    center={defaultPosition} className="map-container"
-                >
+                <MapContainer zoom={2} center={defaultPosition} className="map-container">
                     <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
                     <Marker position={defaultPosition} icon={icon} >
                         <Popup>
@@ -94,11 +93,12 @@ const MapApp = () => {
                         </Popup>
                     </Marker>
                     {
-                        eventsData.map((event) => (
+                        eventsData.filter(
+                            (event) =>
+                                !selectedCategory || event.category === selectedCategory
+                        ).map((event) => (
                             <Marker key={event.id} position={event.position} icon={icon}
                                 eventHandlers={{ click: () => setActiveEvent(event) }} />
-
-
                         ))
                     }
                     {activeEvent && (
@@ -119,23 +119,24 @@ const MapApp = () => {
                             </div>
                         </Popup >
                     )}
+                    {activeEvent && (
+                        <FlyToMarker position={activeEvent.position}
+                            zoomLevel={activeEvent.title === eventsData[0].title ? 2 : 15} />
+                    )}
                 </MapContainer>
             </div>
             <div className="favs-div">
-                <h2 className="">{fullStar} {favs?.length} Favorites Events</h2>
+                <h2 className="">{fullStar} {favs?.length} Favorites Events:</h2>
                 <ul>
                     {favs
-                        ?.map((id) => {
-                            return eventsData.find((event) => event.id === id);
-                        })
+                        ?.map((id) => { return eventsData.find((event) => event.id === id) })
                         .map((event) => {
                             return (
                                 <li
                                     key={event?.id}
-                                    // className="liked-events__event"
-                                    // onClick={() => {
-                                    //     handleListItemClick(event?.id as number);
-                                    // }}
+                                    onClick={() => {
+                                        handleListItemClick(event?.id as number);
+                                    }}
                                 >
                                     <h4><span>{getIcon(event?.category)}</span> {event?.title}</h4>
                                 </li>

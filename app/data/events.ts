@@ -3,6 +3,15 @@ import { Events } from "../components/MapApp";
 const eventsData: Events[] = [
     // War
     {
+        id: 11111,
+        title: "My Home",
+        description:
+            "Beer Sheva",
+        position: [31.2565875, 34.7691391],
+        category: "Home",
+    },
+
+    {
         id: 1,
         title: "Normandy Landings (D-Day)",
         description:
@@ -156,7 +165,7 @@ const eventsData: Events[] = [
         position: [48.8566, 2.3522],
         category: "Politics",
     },
- 
+
     {
         id: 20,
         title: "Egyptian Revolution of 2011",
@@ -339,8 +348,8 @@ const eventsData: Events[] = [
         title: "Discovery of Diamonds in Kimberley",
         description:
             "Diamonds were discovered at Kimberley in 1867, prompting a diamond rush and the creation of De Beers Consolidated Mines Limited in 1888.",
-            position: [-28.7282, 24.7499], // Kimberley, South Africa
-            category: "Science",
+        position: [-28.7282, 24.7499], // Kimberley, South Africa
+        category: "Science",
     },
     {
         id: 43,
