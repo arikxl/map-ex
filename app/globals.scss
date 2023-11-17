@@ -42,5 +42,58 @@ body{
   position: relative;
   border-radius: var(--brad-2);
   border: 2px solid var(--border-color);
+
+}
+
+.popup{
+  h2{
+    font-size: 1rem;
+    color: rgb(111,207,151);
+
+  }
+    span{
+      margin-right: 10px;
+
+    }
   
+  button{
+    color: rgb(111,207,151);
+
+    // span{
+    //   margin-right: 5px;
+    // }
+  }
+  // background-color: var(--body--bg) !important;
+  // color: var(--color--white) !important;
+}
+
+.favs-div{
+  flex:1;
+  padding: 1rem ;
+  border-radius: var(--brad-2);
+  background-color: var(--events--bg);
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--border-color);
+  color: var(--color--white);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar{
+    width:4px;
+  }
+  h2{
+    text-align: center;
+  }
+
+  li{
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: var(--brad-1);
+    background-color: var(--border-color-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    h4{
+      font-size: 0.8rem;
+    }
+  }
 }

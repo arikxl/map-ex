@@ -1,6 +1,6 @@
-// import { HistoricalEvent } from "./Components/MapsApp";
+import { Events } from "../components/MapApp";
 
-const eventsData: HistoricalEvent[] = [
+const eventsData: Events[] = [
     // War
     {
         id: 1,
@@ -8,7 +8,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.",
         position: [49.4144, -0.8322],
-        category: "War",
+        category: "Military Conflict",
     },
     // Art
     {
@@ -71,7 +71,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Rwandan genocide was a mass slaughter of Tutsi in Rwanda during a 100-day period in 1994.",
         position: [-1.9403, 29.8739],
-        category: "War",
+        category: "Military Conflict",
     },
     // Science
     {
@@ -114,7 +114,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The United States dropped atomic bombs on the Japanese cities of Hiroshima and Nagasaki in August 1945, leading to Japan's surrender in World War II.",
         position: [34.3853, 132.4553], // Hiroshima
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 14,
@@ -130,7 +130,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Hernán Cortés and his men conquered the Aztec Empire in 1521, marking a significant event in the Spanish colonization of the Americas.",
         position: [19.4326, -99.1332],
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 16,
@@ -156,14 +156,7 @@ const eventsData: HistoricalEvent[] = [
         position: [48.8566, 2.3522],
         category: "Politics",
     },
-    {
-        id: 19,
-        title: "Battle of Adwa",
-        description:
-            "Ethiopian forces defeated Italian troops at the Battle of Adwa on March 1, 1896, ensuring Ethiopia's independence.",
-        position: [14.04, 38.2844],
-        category: "War",
-    },
+ 
     {
         id: 20,
         title: "Egyptian Revolution of 2011",
@@ -178,7 +171,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Rosetta Stone, key to deciphering ancient Egyptian hieroglyphs, was discovered in Egypt in 1799.",
         position: [31.1981, 29.9192],
-        category: "Other",
+        category: "Archaeology",
     },
     {
         id: 22,
@@ -218,7 +211,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Battle of Isandlwana on January 22, 1879, was a significant defeat for the British Empire at the hands of Zulu forces.",
         position: [-28.3536, 30.6537],
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 27,
@@ -267,7 +260,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Battle of Al-Qadisiyyah in 636 CE saw the Muslim Arab army defeat the Sassanid Persian forces, leading to the Islamic conquest of Persia.",
         position: [32.0575, 47.2635], // Near modern-day Iraq, historically significant for North African Arab history
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 33,
@@ -283,7 +276,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Howard Carter discovered the intact tomb of Pharaoh Tutankhamun in November 1922, providing immense insight into ancient Egyptian culture and history.",
         position: [25.7402, 32.6014], // Valley of the Kings, Egypt
-        category: "Other",
+        category: "Archaeology",
     },
     {
         id: 35,
@@ -291,7 +284,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Battle of Adowa on March 1, 1896, saw Ethiopian forces defeat the Italian military, ensuring Ethiopia's sovereignty.",
         position: [14.9482, 38.7749], // Adowa, Ethiopia
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 36,
@@ -307,7 +300,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Rwandan Genocide was a mass slaughter of Tutsi in Rwanda during a 100-day period from April 7 to mid-July 1994.",
         position: [-1.9403, 29.8739], // Rwanda
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 38,
@@ -331,7 +324,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "On January 22, 1879, Zulu forces defeated British troops at the Battle of Isandlwana during the Anglo-Zulu War.",
         position: [-28.3536, 30.6537], // South Africa
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 41,
@@ -346,8 +339,8 @@ const eventsData: HistoricalEvent[] = [
         title: "Discovery of Diamonds in Kimberley",
         description:
             "Diamonds were discovered at Kimberley in 1867, prompting a diamond rush and the creation of De Beers Consolidated Mines Limited in 1888.",
-        position: [-28.7282, 24.7499], // Kimberley, South Africa
-        category: "Other",
+            position: [-28.7282, 24.7499], // Kimberley, South Africa
+            category: "Science",
     },
     {
         id: 43,
@@ -371,7 +364,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Algerian War of Independence was fought between France and the Algerian National Liberation Front from 1954 to 1962, leading to Algeria gaining its independence.",
         position: [36.7372, 3.0863], // Algeria
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 46,
@@ -387,7 +380,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Battle of Mogadishu in 1993 was a confrontation between the United States forces and Somali militiamen, which was later depicted in the film 'Black Hawk Down'.",
         position: [2.0469, 45.3182], // Mogadishu, Somalia
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 48,
@@ -428,7 +421,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Battle of Ayacucho, on December 9, 1824, was a decisive military encounter during the Peruvian War of Independence. It effectively ended Spanish rule in South America.",
         position: [-13.1588, -74.2239], // Ayacucho, Peru
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 53,
@@ -436,7 +429,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Starting in 1810 with the May Revolution, Argentina fought a series of battles against Spanish rule, culminating in independence in 1818.",
         position: [-34.6037, -58.3816], // Buenos Aires, Argentina
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 54,
@@ -444,7 +437,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Led by Bernardo O'Higgins and José de San Martín, Chilean forces secured independence from Spain with the victory at the Battle of Maipú on April 5, 1818.",
         position: [-33.4869, -70.7678], // Santiago, Chile
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 55,
@@ -460,7 +453,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "One of the deadliest battles in human history, the Battle of Stalingrad from August 23, 1942, to February 2, 1943, was a turning point in World War II, marking the decline of the Axis powers.",
         position: [48.708, 44.5133], // Stalingrad (now Volgograd), Russia
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 57,
@@ -468,7 +461,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "Yuri Gagarin became the first human to journey into outer space and orbit the Earth on April 12, 1961, signifying a significant achievement for the Soviet space program.",
         position: [55.7558, 37.6173], // Moscow, Russia
-        category: "Science",
+        category: "Space",
     },
     {
         id: 58,
@@ -484,7 +477,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The First War of Indian Independence, also known as the Sepoy Mutiny, began in 1857 as a rebellion against the British East India Company's rule.",
         position: [28.7041, 77.1025], // New Delhi, India
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 60,
@@ -516,7 +509,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "India launched its first satellite, Aryabhata, in 1975, marking a milestone in its space program.",
         position: [13.0621, 77.4748], // Bangalore, India
-        category: "Science",
+        category: "Space",
     },
     {
         id: 64,
@@ -548,7 +541,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The crew of the Russian battleship Potemkin rebelled in 1905, a key event in the prelude to the Russian Revolution.",
         position: [44.6167, 33.5254], // Black Sea, near Odessa
-        category: "War",
+        category: "Military Conflict",
     },
     {
         id: 68,
@@ -556,7 +549,7 @@ const eventsData: HistoricalEvent[] = [
         description:
             "The Soviet Union launched Sputnik 1, the world's first artificial satellite, in 1957, initiating the space age and the space race.",
         position: [45.9646, 63.3052], // Baikonur Cosmodrome, Kazakhstan
-        category: "Science",
+        category: "Space",
     },
     {
         id: 69,
@@ -638,6 +631,192 @@ const eventsData: HistoricalEvent[] = [
         position: [51.4911, -0.1278], // London, UK
         category: "Art",
     },
+    {
+        id: 131,
+        title: "The Establishment of the State of Israel",
+        description: "On May 14, 1948, David Ben-Gurion proclaimed the establishment of the State of Israel, marking a significant moment in modern Jewish history.",
+        position: [31.7717, 35.2170], // Tel Aviv, Israel
+        category: "Independence",
+    },
+    {
+        id: 132,
+        title: "The Six-Day War",
+        description: "In June 1967, Israel successfully defended itself in the Six-Day War, gaining control of the Sinai Peninsula, Gaza Strip, West Bank, and Golan Heights.",
+        position: [31.0461, 34.8516], // Sinai Peninsula, Egypt
+        category: "Military Conflict",
+    },
+    {
+        id: 133,
+        title: "Operation Entebbe",
+        description: "In 1976, Israeli commandos conducted a daring rescue mission at Entebbe Airport in Uganda, freeing hostages from a hijacked plane.",
+        position: [0.0420, 32.4434], // Entebbe, Uganda
+        category: "Israel",
+    },
+    {
+        id: 134,
+        title: "The Oslo Accords",
+        description: "The Oslo Accords, signed in the 1990s, aimed at achieving peace between Israel and the Palestinians by addressing issues such as borders and security.",
+        position: [32.0853, 34.7818], // Oslo, Norway
+        category: "Peace Agreement",
+    },
+    {
+        id: 135,
+        title: "The Assassination of Yitzhak Rabin",
+        description: "In 1995, Israeli Prime Minister Yitzhak Rabin was assassinated by a right-wing extremist at a peace rally in Tel Aviv.",
+        position: [32.1093, 34.8555], // Tel Aviv, Israel
+        category: "Political Assassination",
+    },
+    {
+        id: 136,
+        title: "The Second Intifada",
+        description: "The Second Intifada, beginning in 2000, was a period of intensified Israeli-Palestinian conflict marked by protests, violence, and terrorism.",
+        position: [31.7683, 35.2137], // Jerusalem, Israel
+        category: "Conflict",
+    },
+    {
+        id: 137,
+        title: "The Construction of the West Bank Barrier",
+        description: "Starting in 2002, Israel began constructing a security barrier in the West Bank to prevent the infiltration of terrorists.",
+        position: [32.0853, 34.7818], // West Bank, Palestine
+        category: "Security Measure",
+    },
+    {
+        id: 138,
+        title: "The Gaza Withdrawal",
+        description: "In 2005, Israel unilaterally withdrew from the Gaza Strip, dismantling settlements and evacuating Israeli citizens in a controversial move.",
+        position: [31.5000, 34.4667], // Gaza Strip
+        category: "Israel",
+    },
+    {
+        id: 139,
+        title: "Operation Protective Edge",
+        description: "In 2014, Israel launched Operation Protective Edge in response to rocket attacks from Gaza, leading to a conflict with Hamas.",
+        position: [31.5000, 34.4667], // Gaza Strip
+        category: "Military Operation",
+    },
+    {
+        id: 140,
+        title: "The Abraham Accords",
+        description: "In 2020, the United Arab Emirates and Bahrain normalized diplomatic relations with Israel, known as the Abraham Accords, marking a historic shift in Middle East dynamics.",
+        position: [24.4539, 54.3773], // Abu Dhabi, UAE
+        category: "Diplomacy",
+    },
+    {
+        id: 996,
+        title: "The Great Pyramid of Giza",
+        description: "Constructed around 2560 BC, the Great Pyramid of Giza is the oldest and largest of the three pyramids on the Giza Plateau in Egypt.",
+        position: [29.9792, 31.1342], // Giza, Egypt
+        category: "Archaeology",
+    },
+    {
+        id: 995,
+        title: "The Silk Road",
+        description: "The Silk Road was a network of trade routes connecting the East and West, facilitating cultural exchange and trade from the 2nd century BCE to the 18th century.",
+        position: [34.3416, 62.2031], // Afghanistan (Central Asia)
+        category: "Trade Routes",
+    },
+    {
+        id: 994,
+        title: "The Renaissance",
+        description: "The Renaissance was a period in European history, from the 14th to the 17th century, marked by a revival of art, literature, and learning.",
+        position: [43.7730, 11.2555], // Florence, Italy
+        category: "Cultural Movement",
+    },
+    {
+        id: 993,
+        title: "The American Revolution",
+        description: "The American Revolution (1775–1783) marked the thirteen American colonies' fight for independence from British rule, resulting in the formation of the United States.",
+        position: [39.9526, -75.1652], // Philadelphia, USA
+        category: "Military Conflict",
+    },
+    {
+        id: 992,
+        title: "The Industrial Revolution",
+        description: "The Industrial Revolution, starting in the late 18th century, marked a significant shift from agrarian and handcraft-based economies to industrial and machine-based economies.",
+        position: [53.4808, -2.2426], // Manchester, UK
+        category: "Industrialization",
+    },
+    {
+        id: 991,
+        title: "The Moon Landing",
+        description: "Apollo 11, on July 20, 1969, marked the first crewed mission to land on the Moon, with astronauts Neil Armstrong and Buzz Aldrin taking historic steps.",
+        position: [0.6741, -23.4710], // Tranquility Base on the Moon
+        category: "Space",
+    },
+    {
+        id: 141,
+        title: "The Balfour Declaration",
+        description: "In 1917, the Balfour Declaration expressed British support for the establishment of a 'national home for the Jewish people' in Palestine.",
+        position: [31.7683, 35.2137], // Jerusalem, Israel
+        category: "Israel",
+    },
+    {
+        id: 142,
+        title: "The Exodus 1947",
+        description: "In 1947, the ship Exodus 1947, carrying Jewish Holocaust survivors, was intercepted by the British in an attempt to prevent Jewish immigration to Palestine.",
+        position: [32.1093, 34.8555], // Tel Aviv, Israel
+        category: "Israel",
+    },
+    {
+        id: 143,
+        title: "Operation Magic Carpet",
+        description: "Between 1949 and 1950, Operation Magic Carpet airlifted around 50,000 Yemenite Jews to Israel, contributing to the country's population and diversity.",
+        position: [31.7683, 35.2137], // Jerusalem, Israel
+        category: "Israel",
+    },
+    {
+        id: 144,
+        title: "The Yom Kippur War",
+        description: "In 1973, the Yom Kippur War broke out between Israel and a coalition of Arab states, resulting in significant military and political developments.",
+        position: [32.0853, 34.7818], // Tel Aviv, Israel
+        category: "Military Conflict",
+    },
+    {
+        id: 145,
+        title: "The Operation Solomon",
+        description: "In 1991, Operation Solomon airlifted over 14,000 Ethiopian Jews to Israel in less than 36 hours, marking one of the largest humanitarian missions in history.",
+        position: [9.1450, 40.4897], // Addis Ababa, Ethiopia
+        category: "Israel",
+    },
+    {
+        id: 146,
+        title: "The Iron Dome Defense System",
+        description: "Implemented in the 2010s, the Iron Dome is an anti-missile defense system developed by Israel to intercept and destroy incoming rockets.",
+        position: [32.0853, 34.7818], // Tel Aviv, Israel
+        category: "Israel",
+    },
+    {
+        id: 147,
+        title: "The Negev Desert Development",
+        description: "Ongoing efforts to develop the Negev Desert, including agricultural projects and technological advancements, have played a role in Israel's economic and environmental policies.",
+        position: [30.9878, 34.9384], // Negev Desert, Israel
+        category: "Infrastructure",
+    },
+    {
+        id: 148,
+        title: "The Jerusalem Embassy Move",
+        description: "In 2018, the United States officially moved its embassy from Tel Aviv to Jerusalem, recognizing Jerusalem as the capital of Israel, a decision met with international reactions.",
+        position: [31.7683, 35.2137], // Jerusalem, Israel
+        category: "Politics",
+    },
+    {
+        id: 149,
+        title: "The Start-Up Nation",
+        description: "Israel has gained recognition as the 'Start-Up Nation,' with a thriving tech industry, innovation hubs, and numerous successful startups making significant global contributions.",
+        position: [32.0853, 34.7818], // Tel Aviv, Israel
+        category: "Israel",
+    },
+    {
+        id: 150,
+        title: "The Dead Sea Scrolls Discovery",
+        description: "The discovery of the Dead Sea Scrolls in the 1940s and 1950s near the Dead Sea provided invaluable insights into ancient Jewish texts and history.",
+        position: [31.5836, 35.2332], // Dead Sea, Israel
+        category: "Archaeology",
+    },
+
+
+
+
 ];
 
 export default eventsData;
